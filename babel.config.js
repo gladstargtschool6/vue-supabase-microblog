@@ -7,7 +7,7 @@ module.exports = api => {
       "@babel/plugin-proposal-optional-chaining"
     ],
       [
-        "@babel/preset-env",
+        "@babel/preset-env"
         {
           useBuiltIns: "entry",
           // caller.target will be the same as the target option from webpack
