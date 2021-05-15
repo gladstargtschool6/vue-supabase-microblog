@@ -35,7 +35,7 @@
           <h1
             class="text-5xl font-extrabold tracking-tight text-left text-gray-900 leading-tightest md:leading-10 md:text-center sm:leading-none md:text-6xl lg:text-7xl"
           >
-            <span class="inline md:block">Creating a microblog using</span>
+            <span class="inline md:block">Gladstar Gifted and Talented School</span>
             <span
               class="relative mt-2 text-transparent md:inline-block bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500"
             >Facilitating  Functional Education For The Next Innovators, Entrepreneurs and Leaders.</span>
