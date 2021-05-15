@@ -10,6 +10,6 @@
       }
     ]
   ],
-  "plugins" []
+  "plugins" [
 }
 
