@@ -4,13 +4,13 @@
       <nav class="flex flex-wrap justify-center -mx-5 -my-2">
         <div class="px-5 py-2">
           <a
-            href="https://github.com/ftonato"
+            href="https://blog.gladstar.sch.ng"
             class="text-base leading-6 text-gray-500 hover:text-gray-900"
           >Ademílson F. Tonato</a>
         </div>
       </nav>
       <div class="flex justify-center mt-8 space-x-6">
-        <a href="https://twitter.com/ftonato" class="text-gray-400 hover:text-gray-500">
+        <a href="https://twitter.com/gladstarsch" class="text-gray-400 hover:text-gray-500">
           <span class="sr-only">Twitter</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -18,8 +18,8 @@
             />
           </svg>
         </a>
-        <a href="https://github.com/ftonato" class="text-gray-400 hover:text-gray-500">
-          <span class="sr-only">GitHub</span>
+        <a href="https://play.google.com/store/apps/dev?id=5244432553974148442" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">App</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
             <path
               fill-rule="evenodd"
