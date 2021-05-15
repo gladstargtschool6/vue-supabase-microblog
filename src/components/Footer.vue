@@ -6,7 +6,7 @@
           <a
             href="https://blog.gladstar.sch.ng"
             class="text-base leading-6 text-gray-500 hover:text-gray-900"
-          >Ademílson F. Tonato</a>
+          >GladstarGTSchool</a>
         </div>
       </nav>
       <div class="flex justify-center mt-8 space-x-6">
