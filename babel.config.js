@@ -6,7 +6,7 @@ module.exports = api => {
       "@babel/plugin-proposal-nullish-coalescing-operator",
       "@babel/plugin-proposal-optional-chaining"
     ],
-    presets: [
+    presets [
       [
         "@babel/preset-env",
         {
