@@ -5,14 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>Creating a microblog using Vue + Supabase</title>
+    <title>Gladstar Gifted and Talented School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
+    <div id="app">
     <!-- built files will be auto injected -->
+	  <!-- ~/pages/sign-in -->
+<template>
+	<form @submit.prevent="submit()">
+		<input type="email" v-model="email" />
+		<input type="password" v-model="password" />
+		<button type="submit">Sign In</button>
+	</form>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			email: '',
+			password: '',
+		}
+	},
+	methods: {
+		submit() {
+			this.$supabase.auth
+				.signIn({
+					email: this.email,
+					password: this.password,
+				})
+				.then(({ error, data }) => {
+					if (error) {
+						alert(error.message)
+					} else {
+						this.$router.push('/')
+					}
+				})
+		},
+	},
+}
+// ~/middleware/authenticated.js
+export default ({ $supabase, redirect }) => {
+	if (!$supabase.auth.session()) {
+		return redirect('/sign-in')
+	}
+}
+
+</script>
+<!-- ~/pages/index.vue -->
+<template>
+	<div>
+		<h1>You're authenticated!</h1>
+		<button @click="signOut()">Sign Out</button>
+	</div>
+</template>
+
+<script>
+export default {
+	middleware: 'authenticated',
+	methods: {
+		signOut() {
+			this.$supabase.auth.signOut().then(({ error }) => {
+				if (error) {
+					console.error(error)
+				} else {
+					this.$router.push('/sign-in')
+				}
+			})
+		},
+	},
+}
+</script></div>    
+
   </body>
 </html>
