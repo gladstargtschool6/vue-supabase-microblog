@@ -1,39 +1,19 @@
-'use strict'
-/**
-babel.config.js with useful plugins. 
-*/
-module.exports = function(api) {
-  api.cache(true);
-   api.assertVersion("^7.4.5");
+module.exports = {
+  presets: [
+    '@vue/cli-plugin-babel/preset'
+  ]
+}
+import express from "express";
+const app = express();
+const port = 8080;
 
-  const presets = [
-                    [
-                      "@babel/preset-env", {
-                        "targets": {
-                          "esmodules": true,
-                          "node":true
-                        }
-                      }
-                    ]
-                  ];
-  const plugins = [
-    ['@babel/plugin-transform-modules-commonjs'],
-    ['@babel/plugin-transform-destructuring'],
-    ['@babel/plugin-proposal-class-properties'],
-    ['@babel/plugin-proposal-decorators',{
-      'decoratorsBeforeExport':true
-    }],
-    ['@babel/plugin-proposal-export-default-from'],
-    ['@babel/plugin-proposal-export-namespace-from'],
-    ['@babel/plugin-proposal-object-rest-spread'],
-    ['@babel/plugin-transform-template-literals'],
-    ['@babel/plugin-proposal-pipeline-operator',{"proposal":"minimal"}],
-    ['@babel/plugin-transform-runtime'],
-    ['@babel/plugin-transform-classes']
-  ];
+app.get('/',(req,res)=> {
+  res.send('Express Home page')
+});
 
-  return {
-    presets,
-    plugins
-  }
+app.listen(port,() => console.log(`Server started running on ${port}`));
+{
+    "presets": [
+        "@babel/preset-env"
+    ]
 }
