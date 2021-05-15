@@ -8,7 +8,7 @@ module.exports = require("babel-loader").custom(babel => {
 
   return {
     // Passed the loader options.
-    customOptions({ opt1, opt2, ...loader }) {
+    customOptions({ opt1, opt2, ...loader }) 
       return {
         // Pull out any custom options that the loader might have.
         custom: { opt1, opt2 },
