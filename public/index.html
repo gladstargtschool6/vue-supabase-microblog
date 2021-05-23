@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
   </head>
   <body>
-    <div id="app">
-    <script>import { Auth, Typography, Button } from "@supabase/ui";
+    <script>
+ import { Auth, Typography, Button } from "@supabase/ui";
 import { createClient } from "@supabase/supabase-js";
 
 const { Text } = Typography
@@ -42,9 +42,8 @@ export default function Home() {
     </Auth.UserContextProvider>
   );
 };
-
-</script>
-</div>    
+ </script>
+    <div id="app"></div>    
 
   </body>
 </html>
