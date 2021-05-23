@@ -1,5 +1,10 @@
-module.exports = {
-  presets: [
-    '@vue/cli-plugin-babel/preset'
-  ]
-}
+{
+    test: /\.html$/,
+    exclude: [/node_modules/, require.resolve('./index.html')],
+    use: {
+        loader: 'file-loader',
+        query: {
+            name: '[name].[ext]'
+        },
+    },
+},
