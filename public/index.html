@@ -43,7 +43,18 @@ export default function Home() {
   );
 };
  </script>
-    <div id="app"></div>    
+    <div id="app">
+    // Initialize the JS client
+     import { createClient } from '@supabase/supabase-js'
+     const supabase = createClient([https://imdvvfcbtrfewysxgrnr.supabase.co], [eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNDMzNzg3MSwiZXhwIjoxOTI5OTEzODcxfQ.O7Ck0RFbXxsJ
+
+9BpxdAuey5O_MJcC_lHM06xDYKTbWxg])
+
+    // Make a request
+    let { data: todos, error } = await supabase
+      .from('todos')
+      .select('*')
+    </div>    
 
   </body>
 </html>
